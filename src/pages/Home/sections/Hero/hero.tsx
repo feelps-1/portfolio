@@ -11,12 +11,20 @@ const Hero = () => {
         backgroundColor: theme.palette.primary.main,
         height: "100vh",
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
+
+        [theme.breakpoints.up('xs')]: { // <= mobile
+          paddingTop: "100px",
+
+        },
+        [theme.breakpoints.up('md')]: { // >=mobile
+          paddingTop: "0",
+        }
 
     }))
 
     const StyledImg =  styled("img")(({theme})=> ({
-      width: "80%",
+      width: "75%",
       border:"1px solid",
       borderColor: theme.palette.primary.contrastText,
       borderRadius: "50%"
@@ -44,7 +52,7 @@ const Hero = () => {
                 <Typography color="primary.contrastText" variant="h2" textAlign="center">Eu sou um desenvolvedor</Typography>
                 <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                   <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                    <StyledButton>
+                    <StyledButton onClick={()=> console.log("Download")}>
                       <DownloadIcon />
                       <Typography>
                         Download CV
@@ -52,7 +60,7 @@ const Hero = () => {
                     </StyledButton>
                   </Grid>
                   <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                    <StyledButton>
+                    <StyledButton onClick={()=> console.log("Contato")}>
                       <EmailIcon />
                       <Typography>
                         Contact me
