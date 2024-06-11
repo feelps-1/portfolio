@@ -1,5 +1,6 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
 
+
 let theme = createTheme({
   palette: {
     primary: {
@@ -10,7 +11,7 @@ let theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Helvetica Neue"
+    fontFamily: "Roboto, sans-serif, Helvetica, Arial"
   }
 });
 
