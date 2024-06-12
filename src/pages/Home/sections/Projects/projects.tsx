@@ -1,5 +1,4 @@
 import { styled, Container, Grid, Box, Typography } from "@mui/material"
-import StyledProject from "../../../../components/StyledProjects/styledProject"
 import Cin from "../../../../assets/images/educin.png"
 import If from "../../../../assets/images/eduif.jpg"
 
@@ -62,6 +61,9 @@ const About = () => {
                         <StyledSkillImg src = {If} />
                         <Typography textAlign="center" color="theme.palette.primary.contrastText">
                             Técnico em Eletrônica
+                        </Typography>
+                        <Typography textAlign="center" color="theme.palette.primary.contrastText">
+                            mulher no volante perigo constante
                         </Typography>
                     </Box>
                 </Grid>

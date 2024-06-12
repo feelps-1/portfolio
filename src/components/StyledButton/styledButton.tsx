@@ -26,11 +26,6 @@ const StyledButton: React.FC<StyledButtonProps> = ({children, href}) => {
   
     }))
 
-    const handleClick = () => {
-      window.location.href = href;
-    };
-
-
     return (
       <>
         <StyledButton href={href} target="_blank"> 
