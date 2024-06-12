@@ -13,11 +13,11 @@ const Hero = () => {
         display: "flex",
         alignItems: "center",
 
-        [theme.breakpoints.up('xs')]: { // <= mobile
+        [theme.breakpoints.up('xs')]: { 
           paddingTop: "100px",
 
         },
-        [theme.breakpoints.up('md')]: { // >=mobile
+        [theme.breakpoints.up('md')]: { 
           paddingTop: "0",
         }
 
@@ -49,10 +49,10 @@ const Hero = () => {
               </Grid>
               <Grid item xs={12} md={7}>
                 <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2}>Felipe Oliveira</Typography>
-                <Typography color="primary.contrastText" variant="h2" textAlign="center">Eu sou um desenvolvedor</Typography>
+                <Typography color="primary.contrastText" variant="h2" textAlign="center">Estoy loco ihihihi</Typography>
                 <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                   <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                    <StyledButton onClick={()=> console.log("Download")}>
+                    <StyledButton href="https://github.com/feelps-1">
                       <DownloadIcon />
                       <Typography>
                         Download CV
@@ -60,7 +60,7 @@ const Hero = () => {
                     </StyledButton>
                   </Grid>
                   <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                    <StyledButton onClick={()=> console.log("Contato")}>
+                    <StyledButton href="https://github.com/feelps-1">
                       <EmailIcon />
                       <Typography>
                         Contact me

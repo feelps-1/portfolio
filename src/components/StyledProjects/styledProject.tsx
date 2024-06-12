@@ -1,14 +1,13 @@
 import { styled } from "@mui/material"
 import { ReactNode } from "react"
 
-interface StyledButtonProps{
-    href: string;
-    children: ReactNode;
-    target?: string;
+interface StyledProjectProps{
+    onClick: () => void
+    children: ReactNode
 }
 
-const StyledButton: React.FC<StyledButtonProps> = ({children, href}) => {
-    const StyledButton=  styled("a")(({ theme })=> ({
+const StyledProject: React.FC<StyledProjectProps> = ({children, onClick}) => {
+    const StyledProject=  styled("button")(({ theme })=> ({
         backgroundColor: "transparent",
         border: '1px solid',
         borderColor: theme.palette.primary.contrastText,
@@ -26,20 +25,15 @@ const StyledButton: React.FC<StyledButtonProps> = ({children, href}) => {
   
     }))
 
-    const handleClick = () => {
-      window.location.href = href;
-    };
-
 
     return (
       <>
-        <StyledButton href={href} target="_blank"> 
-
+        <StyledProject onClick={onClick}> 
             {children}
-        </StyledButton>
+        </StyledProject>
       </>
     )
   }
   
-  export default StyledButton
+  export default StyledProject
   
