@@ -11,7 +11,7 @@ let theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Roboto, sans-serif, Helvetica, Arial"
+    fontFamily: "Poppins, Roboto, sans-serif, Helvetica, Arial"
   }
 });
 

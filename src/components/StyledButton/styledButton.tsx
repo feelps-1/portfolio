@@ -29,7 +29,6 @@ const StyledButton: React.FC<StyledButtonProps> = ({children, href}) => {
     return (
       <>
         <StyledButton href={href} target="_blank"> 
-
             {children}
         </StyledButton>
       </>

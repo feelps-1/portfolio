@@ -1,7 +1,8 @@
-import { styled, Container, Grid, Box, Typography } from "@mui/material"
+import { styled, Container, Grid, Box, Typography} from "@mui/material"
 import Cin from "../../../../assets/images/educin.png"
 import If from "../../../../assets/images/eduif.jpg"
-
+import Synesthesia from "../../../../assets/images/synesthesia.png"
+import CardComponent from "../../../../components/ProjectCard/projectCard"
 
 const About = () => {
     const StyledAbout =  styled("div")(({theme})=> ({
@@ -21,65 +22,77 @@ const About = () => {
 
     }))
 
-    const StyledSkillImg =  styled("img")(({theme})=> ({
-        width: "30%",
-        border:"1px solid",
-        borderColor: theme.palette.primary.contrastText,
-        borderRadius: "50%",
- 
-    }))
   return (
     <>
       <StyledAbout>
         <Container maxWidth="lg">
             <Grid container spacing={7}>
-                <Grid item xs={12} md={4} bgcolor="primary.main" textAlign="center">
-                        <StyledSkillImg src = {Cin} />
-                        <Typography textAlign="center" color="theme.palette.primary.contrastText">
-                            Bacharelado em Sistemas de Informação
-                        </Typography>
-                        <Typography textAlign="center" color="theme.palette.primary.contrastText">
-                            Breve descrição pipipi popopo
-                        </Typography>
+                <Grid item xs={12} md={4}>
+                    <Box>
+                <CardComponent
+                    href="https://synesthesiavision.com/"
+                    image={Synesthesia}
+                    alt="green iguana"
+                    title="Bolsista de Iniciação Científica"
+                    description="Sou bolsista no GRENDES - LabGeo no IFPE Campus Recife"
+                />
+                </Box>
+                </Grid>
+                
+                <Grid item xs={12} md={4}>
+                
+                <CardComponent
+                    href="https://synesthesiavision.com/"
+                    image={Synesthesia}
+                    alt="green iguana"
+                    title="Bolsista de Iniciação Científica"
+                    description="Sou bolsista no GRENDES - LabGeo no IFPE Campus Recife, onde atuo no desenvolvimento de um óculos sensorial para cegos."
+                />
+          
                 </Grid>
                 <Grid item xs={12} md={4}>
-                <Box bgcolor="primary.main" textAlign="center">
-                        <Typography textAlign="center">
-                            Tchong
-                        </Typography>
-                    </Box>
+           
+                <CardComponent
+                    href="https://synesthesiavision.com/"
+                    image={Cin}
+                    alt="green iguana"
+                    title="Bolsista de Iniciação Científica"
+                    description="Sou bolsista no GRENDES - LabGeo no IFPE Campus Recife, onde atuo no desenvolvimento de um óculos sensorial para cegos."
+                />
+      
                 </Grid>
                 <Grid item xs={12} md={4}>
-                <Box bgcolor="primary.main" textAlign="center">
-                        <Typography textAlign="center">
-                            Tchong
-                        </Typography>
-                    </Box>
+       
+                    <CardComponent
+                    href="https://synesthesiavision.com/"
+                    image={If}
+                    alt="green iguana"
+                    title="Bolsista de Iniciação Científica"
+                    description="Sou bolsista no GRENDES - LabGeo no IFPE Campus Recife, onde atuo no desenvolvimento de um óculos sensorial para cegos."
+                />
+        
                 </Grid>
                 <Grid item xs={12} md={4}>
-                    <Box bgcolor="primary.main" textAlign="center">
-                        <StyledSkillImg src = {If} />
-                        <Typography textAlign="center" color="theme.palette.primary.contrastText">
-                            Técnico em Eletrônica
-                        </Typography>
-                        <Typography textAlign="center" color="theme.palette.primary.contrastText">
-                            mulher no volante perigo constante
-                        </Typography>
-                    </Box>
+    
+                <CardComponent
+                    href="https://synesthesiavision.com/"
+                    image={Synesthesia}
+                    alt="green iguana"
+                    title="Bolsista de Iniciação Científica"
+                    description="Sou bolsista no GRENDES - LabGeo no IFPE Campus Recife, onde atuo no desenvolvimento de um óculos sensorial para cegos."
+                />
+
                 </Grid>
                 <Grid item xs={12} md={4}>
-                <Box bgcolor="primary.main" textAlign="center">
-                        <Typography textAlign="center">
-                            Tchong
-                        </Typography>
-                    </Box>
-                </Grid>
-                <Grid item xs={12} md={4}>
-                <Box bgcolor="primary.main" textAlign="center">
-                        <Typography textAlign="center">
-                            Tchong
-                        </Typography>
-                    </Box>
+
+                <CardComponent
+                    href="https://synesthesiavision.com/"
+                    image={Synesthesia}
+                    alt="green iguana"
+                    title="Bolsista de Iniciação Científica"
+                    description="Sou bolsista no GRENDES - LabGeo no IFPE Campus Recife, onde atuo no desenvolvimento de um óculos sensorial para cegos."
+                />
+
                 </Grid>
             </Grid>
 
