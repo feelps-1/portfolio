@@ -21,9 +21,9 @@ const stack = [
 export function About() {
     return (
     <div className="bg-slate-800 md:rounded-b-md p-4 justify-center items-center flex flex-col h-full w-full relative">
-        <h1 className="font-bold text-4xl md:mb-4 md:text-start text-center">Sobre mim</h1>
+        <h1 className="font-bold text-4xl mb-4 md:text-start text-center">Sobre mim</h1>
         <span className="gap-4">
-            <h2 className="text-xl md:text-center text-justify mb-4">Sou estudante do 2º período de 
+            <h2 className="text-lg md:text-xl md:text-center text-justify mb-4">Sou estudante do 2º período de 
                 Sistemas de Informação no CIn-UFPE e 
                 formado como Técnico em Eletrônica no IFPE, adquiri experiência em 
                 diversas áreas da tecnologia.</h2>
