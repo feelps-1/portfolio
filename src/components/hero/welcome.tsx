@@ -1,6 +1,6 @@
 export function Welcome(){
     return (
-        <div className="flex flex-1 flex-col items-center justify-center md:rounded-md text-2xl md:text-6xl bg-slate-800 text-white">
+        <div className="h-full flex flex-1 flex-col items-center justify-center md:rounded-t-md text-2xl md:text-6xl bg-slate-800 text-white">
             <span className="flex md:gap-4 gap-2">
                 <h3>Olá</h3>
                 <img className='w-10 md:w-16' src='/wavingemoji.svg' alt='waving hand emoji'></img>

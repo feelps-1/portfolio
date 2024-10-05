@@ -3,6 +3,7 @@ import linkedin from "/linkedin.svg"
 import github from "/github.svg"
 import { Profile } from "../components/hero/profile";
 import { Welcome } from "../components/hero/welcome";
+import { About } from "../components/hero/about";
 
 const contacts = [  
     {icon: email, url:'mailto:felipesansoliv01@gmail.com'},
@@ -13,10 +14,13 @@ const contacts = [
 export function Hero() {
     return (
         <>
-        <div className="md:h-screen flex flex-col items-center justify-center md:px-10">
+        <div className="md:h-screen flex flex-wrap items-center justify-center md:px-10">
                 <div className="flex justify-center w-full md:gap-10 flex-col md:flex-row"> 
                     <Profile contacts={contacts}/>
-                    <Welcome/>
+                    <div className="overflow-y-auto gap-4">
+                        <Welcome/>
+                        <About/>
+                    </div> 
                 </div>
         </div>
         </>

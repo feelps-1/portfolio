@@ -1,6 +1,9 @@
+import StackList, { Tech } from "./about/stacklist"
+
 interface ProjectProps {
     title: string
     description: string
+    skills: Tech[] 
     preview?: string
     link?: string
 }
@@ -8,12 +11,13 @@ interface ProjectProps {
 export function ProjectCard({
     title,
     description,
+    skills,
     preview = '',
     link = '',
 }: ProjectProps){
     return (
         <a href={link} target="#">
-        <div className="bg-slate-600 gap-3">
+        <div className="bg-zinc-800 gap-2 rounded-t-lg max-w-[500px] h-full">
             {preview && (
                 <img
                 src={preview}
@@ -21,10 +25,12 @@ export function ProjectCard({
                 className="max-h-52 w-full rounded-t-lg object-cover"
                 />
             )}
-            <span>
-                <h3 className="p-2">{title}</h3>
-                <p className="text-sm p-2">{description}</p>
-            </span>
+            <div className="px-2">
+                <h3 className="pt-2">{title}</h3>
+                <p>Skills usadas:</p>
+                <StackList stack={skills} size='xsmall'/>
+                <p className="text-sm pb-2  text-ellipsis">{description}</p>
+            </div>
         </div>
         </a>
     )
