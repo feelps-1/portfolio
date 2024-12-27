@@ -8,8 +8,16 @@ import nodejs from "/nodejs.svg"
 import postgresql from "/postgresql.svg"
 import figma from "/figma.svg"
 import arduino from "/arduino.svg"
+import cpp from "/c-plusplus.svg"
+import nextjs from "/nextjs-icon.svg"
+import cin from "/HC.png"
+import opencv from "/opencv.svg"
 import dlj from "/dlj.jpg"
 import cspreview from "/contestsearchpreview.png"
+import synesthesia from "/synesthesia.jpg"
+import cuidamais from "/cuidamais.jpg"
+import astro from "/astro.gif"
+
 
 export interface Project {
     title: string
@@ -29,12 +37,48 @@ const projectStacks = {
         {icon: nodejs, alttext: "NodeJS Icon"},
         {icon: postgresql, alttext: "Postgresql Icon"},
     ],
+    boraimpactar: [
+        {icon: react, alttext: "React Icon"},
+        {icon: typescript, alttext: "Typescript Icon"},
+        {icon: tailwind, alttext: "Tailwind Icon"},
+        {icon: figma, alttext: "Figma Icon"},   
+        {icon: nodejs, alttext: "NodeJS Icon"},
+        {icon: postgresql, alttext: "Postgresql Icon"},
+        {icon: nextjs, alttext: "NextJS Icon"}
+    ],
     synesthesia: [
+        {icon: cpp, alttext: "CPlusPlus Icon"},
         {icon: arduino, alttext: "Arduino Icon"}
+    ],
+    cuidamais: [
+        {icon: react, alttext: "React Icon"},
+        {icon: typescript, alttext: "Typescript Icon"},
+        {icon: tailwind, alttext: "Tailwind Icon"},
+        {icon: figma, alttext: "Figma Icon"},   
+        {icon: nodejs, alttext: "NodeJS Icon"},
+        {icon: postgresql, alttext: "Postgresql Icon"},
+    ],
+    asteroidfinder: [
+        {icon: cpp, alttext: "CPlusPlus Icon"},
+        {icon: opencv, alttext: "OpenCV Icon"},
     ]
 };
 
 const projects: Array<Project> = [
+    {
+        title: "Cuida+",
+        description: "App para auxiliar cuidadores de idosos familiares a ter acesso ao conhecimento e melhoria na rotina de cuidado na 13ª edição do Claro Campus Mobile",
+        link: "https://www.institutoclaro.org.br/campus-mobile/noticias/conheca-os-projetos-selecionados-para-a-13a-edicao-do-campus-mobile/",
+        preview: cuidamais,
+        skills: projectStacks.cuidamais
+    },
+    {
+        title: "CIn - Bora Impactar",
+        description: "Projeto de extensão em parceria com a Prefeitura do Recife para desenvolver um portal que ajude ONGs a captar oportunidades de fomento",
+        link: "https://extensao.cin.ufpe.br/portf%C3%B3lio-de-a%C3%A7%C3%B5es",
+        preview: cin,
+        skills: projectStacks.boraimpactar
+    },
     {
         title: "Contest Search",
         description: "Site que agrega competições de nível estudantil",
@@ -44,18 +88,25 @@ const projects: Array<Project> = [
     },
     {
         title: "Synesthesia Vision",
-        description: "Desenvolvedor técnico de tecnologias assistivas",
-        link: "https://synesthesiavision.com/",
-        preview: '/contestsearchpreview.png',
+        description: `Trabalhei como desenvolvedor técnico de um dispositivo sensorial para auxiliar pessoas com deficiência visual`,
+        link: "https://www.instagram.com/synesthesiavision/",
+        preview: synesthesia,
         skills: projectStacks.synesthesia
     },
     {
         title: "Desafio Liga Jovem",
-        description: "Finalista da maior competição nacional de empreendedorismo e inovação, com um projeto de tecnologia sustentavél",
-        link: "https://synesthesiavision.com/",
+        description: "Finalista da maior competição nacional de empreendedorismo e inovação, com um projeto de tecnologia sustentável",
+        link: "https://portal.ifpe.edu.br/recife/noticias/estudantes-do-ifpe-recife-passam-para-semifinal-do-desafio-liga-jovem-sebrae/",
         preview: dlj,
         skills: projectStacks.synesthesia
     },
+    {
+        title: "AsteroidFinder",
+        description: "Projeto de visão computacional para detectar asteroides em imagens de satélite usando OpenCV e conceitos de orientação a objetos",
+        link: "#",
+        preview: astro,
+        skills: projectStacks.asteroidfinder
+    }
 ]
 
 export function Projects() {

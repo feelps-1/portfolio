@@ -19,7 +19,7 @@ export function Profile({ contacts }: ProfileProps) {
                 <h2 className="text-2xl font-light text-gray-700 dark:text-gray-100">SANTANA DE OLIVEIRA</h2>
             </span>
             <section className="rounded rounded-bl-none rounded-tl-none border-l-4 border-l-sky-500 p-4 bg-gray-700 text-white lg:text-sm">
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis diam a dolor porta pharetra id sed velit. In posuere ut sapien eget suscipit. Donec quis sollicitudin ante.</span>
+                <span>Gosto de desenvolver soluções inovadoras para ajudar pessoas e transformar a comunidade ao meu redor.</span>
             </section>
             <section className="flex flex-row gap-2">
                 <MapPin/>
