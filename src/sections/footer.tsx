@@ -1,0 +1,4 @@
+﻿import { ArrowUpRight, Orbit } from 'lucide-react';
+export function Footer() {
+  return <footer id="contato" className="footer container"><div className="footer-top"><h2>A próxima ideia<br/>começa com <span>uma conversa.</span></h2><a className="contact-arrow" href="mailto:felipesansoliv01@gmail.com" aria-label="Enviar e-mail para Felipe"><ArrowUpRight/></a></div><div className="footer-links"><a href="mailto:felipesansoliv01@gmail.com">felipesansoliv01@gmail.com <ArrowUpRight size={16}/></a><div><a href="https://github.com/feelps-1" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={15}/></a><a href="https://www.linkedin.com/in/felipe-santana-de-oliveira-4251a8230/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={15}/></a></div></div><div className="footer-bottom"><span><Orbit size={18}/> Felipe Oliveira</span><span>Feito na Terra, com curiosidade.</span><a href="#inicio">Voltar ao topo ↑</a></div></footer>;
+}

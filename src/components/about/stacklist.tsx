@@ -10,26 +10,25 @@ interface StackProps extends VariantProps<typeof list> {
 }
 
 const list = tv({
-    base: 'md:grayscale md:hover:grayscale-0',
+    base: 'transition-all duration-300 grayscale hover:grayscale-0 hover:scale-110',
     variants: {
         size: {
-            xsmall: 'size-8',
-            small: 'size-16',
-            medium: 'size-20'
+            xsmall: 'size-7',
+            small: 'size-12',
+            medium: 'size-14'
         },
-
     },
     defaultVariants: {
         size: 'medium',
     }
-    },)
+})
 
 export default function StackList({ stack, size }: StackProps) {   
     return (
         <div className="flex p-2 gap-4 flex-wrap justify-center items-center">
             {
                 stack.map(({icon, alttext}) => (
-                    <img src={icon} alt={alttext} className={list({ size })}></img>
+                    <img key={alttext} src={icon} alt={alttext} className={list({ size })} />
                 ))
             }
         </div>

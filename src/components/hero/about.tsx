@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { Download } from "lucide-react";
 import StackList from "../about/stacklist"
 import react from "/react.svg"
 import typescript from "/typescript.svg"
@@ -12,7 +14,7 @@ const stack = [
     {icon: react, alttext: "React Icon"},
     {icon: typescript, alttext: "Typescript Icon"},
     {icon: tailwind, alttext: "Tailwind Icon"},
-    {icon: figma, alttext: "Figma Icon"},   
+    {icon: figma, alttext: "Figma Icon"},
     {icon: vite, alttext: "Vite Icon"},
     {icon: nodejs, alttext: "NodeJS Icon"},
     {icon: postgresql, alttext: "Postgresql Icon"},
@@ -20,27 +22,40 @@ const stack = [
 
 export function About() {
     return (
-    <div className="bg-slate-800 md:rounded-b-md p-4 justify-center items-center flex flex-col h-full w-full relative">
-        <h1 className="font-bold text-4xl mb-4 md:text-start text-center">Sobre mim</h1>
-        <span className="gap-4">
-            <h2 className="text-lg md:text-xl md:text-center text-justify mb-4">Sou estudante do 2º período de 
-                Sistemas de Informação no CIn-UFPE e 
-                formado como Técnico em Eletrônica no IFPE, adquiri experiência em 
-                diversas áreas da tecnologia.</h2>
-            <h3 className="text-3xl font-bold text-center mb-4">Atualmente, prefiro trabalhar com essas tecnologias:</h3>
-            <StackList stack={stack}/>
-        </span>
+    <motion.div
+        id="sobre"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+        className="glass-card p-8 flex flex-col gap-6"
+    >
+        <h2 className="font-bold text-2xl md:text-3xl text-center lg:text-left">
+            Sobre <span className="glow-text">mim</span>
+        </h2>
 
-        <div className="bg-zinc-500 mt-10 text-xl p-4 rounded-lg hover:bg-blue-600">
-        <a href={resume} download="curriculoFelipeOliveira.pdf"> 
-            Baixar CV 
-        </a>
+        <p className="text-slate-300 text-base md:text-lg leading-relaxed text-center lg:text-left">
+            Sou estudante do 2º período de Sistemas de Informação no CIn-UFPE e
+            formado como Técnico em Eletrônica no IFPE, adquiri experiência em
+            diversas áreas da tecnologia.
+        </p>
+
+        <div>
+            <h3 className="text-lg font-semibold text-center mb-3 text-slate-200">
+                Tecnologias que uso no dia a dia
+            </h3>
+            <StackList stack={stack}/>
         </div>
-        
-        {/* <span className="gap-4">
-            <h3 className="text-3xl font-bold text-center">Também tenho experiência com essas:</h3>
-        </span>
-        <StackList stack={stack}/> */}
-    </div>
+
+        <div className="flex justify-center">
+            <a
+                href={resume}
+                download="curriculoFelipeOliveira.pdf"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium text-sm hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5"
+            >
+                <Download size={18} />
+                Baixar CV
+            </a>
+        </div>
+    </motion.div>
     )
 }
